@@ -1,217 +1,114 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2021 Jitin Nair
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
-%
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
-
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip} 	
-
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
-\usepackage{tabularx}
-
-%for lists within experience section
-\usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
-\usepackage{titlesec}				
-\usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
-
-%for social icons
-\usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
-
-
-% job listing environments
-\newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
-
-\newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}    
-    }
-
-
-
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
-\begin{document}
-
-% non-numbered pages
-\pagestyle{empty} 
-
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\Huge{SAMAY SARTHAK SWAIN} \\[7.5pt]
+
+\href{https://github.com/SamaySarthakSwain}{\raisebox{-0.05\height}\faGithub\ SamaySarthakSwain} \ $|$ \ 
+\href{https://www.linkedin.com/in/samay-sarthak-swain-b9a277330}{\raisebox{-0.05\height}\faLinkedin\ Samay Sarthak Swain} \ $|$ \ 
+\href{mailto:samaysarthakswain@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ samaysarthakswain@gmail.com} \ $|$ \ 
+\href{tel:+918327780375}{\raisebox{-0.05\height}\faMobile \ +91 8327780375} \\
+
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
+% SUMMARY
 %----------------------------------------------------------------------------------------
 
-%Interests/ Keywords/ Summary
 \section{Summary}
-This CV can also be automatically compiled and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+Dynamic Full Stack Developer specializing in AI-integrated web applications and scalable system architecture. Proven track record in building high-impact solutions, including a tourism platform with AR/VR capabilities and an AI-driven healthcare monitor. Winner of GDG Atlas OnCampus, with a focus on delivering user-centric technology and high-performance code.
 
-%Experience
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
 \section{Work Experience}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
+\begin{jobshort}{UI/UX \& Graphic Designer -- MMG Graphics}{Oct 2023 - Jan 2024}
+Handled brand identity and digital interface designs.
 \end{jobshort}
 
-
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+\begin{joblong}{Technical Research Intern -- NIST University}{May 2024 - Jul 2024}
+\item Worked on Object-Oriented Programming (OOPS) concepts in C++
 \end{joblong}
-  
-%Projects
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+\textbf{Lets Explore -- AI Tourism Platform} & \hfill May 2025 - Present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+- Built AR/VR-based monument exploration using React.js and Three.js with 3D models \\
+- Integrated Web Speech API for voice-based navigation \\
+- Developed AI travel assistant using LLMs (Gemini/OpenAI) \\
+- Implemented Emergency SOS using Google Maps API
+}  \\
+\end{tabularx}
+
+\vspace{5pt}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{NeuroGuard -- AI Healthcare Web Platform} & \hfill Feb 2024 - Present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+- Developed full-stack healthcare monitor using Node.js, Express, FastAPI \\
+- Built AI-based real-time health monitoring system \\
+- Designed user-friendly UI using Tailwind CSS
+}  \\
+\end{tabularx}
+
+\vspace{5pt}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{V2V Communication \& Vehicle Black Box System} & \hfill Oct 2025 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+- Designed V2V communication system using C++ and MQTT \\
+- Built hardware system using Arduino/ESP32 \\
+- Enabled real-time accident data logging for emergency response
+}  \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
+% EDUCATION
 %----------------------------------------------------------------------------------------
+
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+\begin{tabularx}{\linewidth}{@{}l X@{}}
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+2024 - 2028 & B.Tech in Computer Science (AI/ML) at \textbf{NIST University} \\
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
+2022 & Class 12th -- KC Public School \hfill (80\%) \\
 
-2021 & Class 10th Some Board \hfill  (Grades) \\
+2020 & Class 10th -- KC Public School \hfill (93\%) \\
+
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-%	PUBLICATIONS
+% SKILLS
 %----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
 
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+
+Frontend \& Design & React.js, Three.js, JavaScript, HTML, CSS, Tailwind CSS, UI/UX \\
+
+Backend \& Languages & TypeScript, Node.js, FastAPI, Python, Java, C/C++ \\  
+
+Database & MySQL, MongoDB \\  
+
+Tools \& Infra & Git, GitHub, Docker, Netlify, Vercel, REST APIs \\  
+
 \end{tabularx}
 
-\vfill
-\center{\footnotesize Last updated: \today}
+%----------------------------------------------------------------------------------------
+% ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
 
-\end{document}
+\section{Achievements}
+
+\begin{itemize}
+\item GDG Atlas OnCampus -- Winner
+\item Odisha AI Symposium -- 1st Runner-up
+\item Startup Odisha Campus Hackfest -- Finalist
+\item Techspire (NIT Bhubaneswar) -- Finalist
+\item Git \& GitHub Workshop -- 2nd Runner-up
+\end{itemize}
